@@ -1,5 +1,7 @@
 package in.qwerto.qwerto;
 
+import android.app.Dialog;
+import android.content.Intent;
 import android.graphics.Color;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
@@ -76,6 +78,7 @@ public class HomeActivity extends ActionBarActivity implements View.OnClickListe
 
     }
 
+
     @Override
     public void onClick(View v) {
         switch (v.getId()){
@@ -137,4 +140,8 @@ public class HomeActivity extends ActionBarActivity implements View.OnClickListe
         }
     }
 
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+    }
 }
