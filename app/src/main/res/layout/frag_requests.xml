@@ -3,12 +3,18 @@
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <TextView
-        android:textSize="20dp"
-        android:gravity="center"
+    <android.support.v4.widget.SwipeRefreshLayout
+        android:id="@+id/swipetoRefreshRequests"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="No Requests made"/>
+
+        android:layout_above="@+id/lAddRequest">
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rvRequests"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+    </android.support.v4.widget.SwipeRefreshLayout>
+
     <LinearLayout
         android:id="@+id/lAddRequest"
         android:layout_alignParentBottom="true"

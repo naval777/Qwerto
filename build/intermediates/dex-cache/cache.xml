@@ -16,11 +16,11 @@
         <dex dex="/home/sandeep/Desktop/Qwerto/app/build/intermediates/pre-dexed/debug/internal_impl-22.2.0-1ad65ce9667ab67e5488e327941da01cb32418e7.jar" />
     </item>
     <item
-        jar="/home/sandeep/Desktop/Qwerto/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.2.0/classes.jar"
+        jar="/home/sandeep/Desktop/Qwerto/app/build/intermediates/exploded-aar/com.android.support/recyclerview-v7/22.2.0/classes.jar"
         jumboMode="false"
         revision="22.0.1"
-        sha1="73753982da6bde518f3a4c6b372749981d14d1a0">
-        <dex dex="/home/sandeep/Desktop/Qwerto/app/build/intermediates/pre-dexed/debug/classes-5eede76d55bd93723e22d1171dc60b08af01d7c9.jar" />
+        sha1="5b37cf49773f7f17aca9830efd3053b0cac56728">
+        <dex dex="/home/sandeep/Desktop/Qwerto/app/build/intermediates/pre-dexed/debug/classes-3509340c2eb21ab4df264f76a01c9827e3e183c4.jar" />
     </item>
     <item
         jar="/home/sandeep/Desktop/Qwerto/app/build/intermediates/exploded-aar/com.android.support/support-v4/22.2.0/classes.jar"

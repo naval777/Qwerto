@@ -17,7 +17,6 @@ import android.view.View;
 import android.view.Window;
 import android.widget.EditText;
 import android.widget.ImageView;
-import android.widget.LinearLayout;
 import android.widget.TextView;
 
 
@@ -90,7 +89,11 @@ public class DialogRequest extends Dialog implements View.OnClickListener {
                 cancel();
                 break;
             case R.id.tvDone:
-
+                RequestClass rc = new RequestClass();
+                rc.setRequest(etRequest.getText().toString());
+                FragmentRequests.data.add(0,rc);
+                FragmentRequests.adapter.notifyDataSetChanged();
+                dismiss();
                 break;
             case R.id.ivCamera:
                 Intent intent = new Intent(
