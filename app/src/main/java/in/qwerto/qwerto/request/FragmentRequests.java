@@ -29,8 +29,8 @@ public class FragmentRequests extends Fragment {
     LinearLayout addRequest;
     DialogRequest dialog;
     RecyclerView requests;
-    public static RequestsAdapter adapter;
     SwipeRefreshLayout swipeRefreshLayout;
+    public static RequestsAdapter adapter;
     public static ArrayList<RequestClass> data;
 
     @Nullable
@@ -54,11 +54,10 @@ public class FragmentRequests extends Fragment {
         requests.setAdapter(adapter);
         requests.setLayoutManager(new LinearLayoutManager(getActivity()));
 
-
         swipeRefreshLayout.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
             @Override
             public void onRefresh() {
-                //Refresh List
+
             }
         });
 

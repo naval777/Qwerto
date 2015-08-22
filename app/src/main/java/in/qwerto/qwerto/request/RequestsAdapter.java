@@ -1,6 +1,7 @@
 package in.qwerto.qwerto.request;
 
 import android.content.Context;
+import android.content.Intent;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -19,8 +20,10 @@ public class RequestsAdapter extends RecyclerView.Adapter<RequestsAdapter.Reques
 
     private  LayoutInflater inflater;
     ArrayList<RequestClass> requestsData;
+    Context context;
 
     public RequestsAdapter(Context context, ArrayList<RequestClass> requestsData){
+        this.context =context;
         inflater=LayoutInflater.from(context);
         this.requestsData = requestsData;
     }
@@ -34,14 +37,16 @@ public class RequestsAdapter extends RecyclerView.Adapter<RequestsAdapter.Reques
 
     @Override
     public void onBindViewHolder(RequestViewHolder holder, final int position) {
-        RequestClass singleRequest = requestsData.get(position);
+        final RequestClass singleRequest = requestsData.get(position);
         holder.request.setText(singleRequest.getRequest());
         holder.numOfMsgs.setText(singleRequest.getNumOfMsgs());
         holder.numOfVendors.setText(singleRequest.getNumOfVendors());
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Log.d("Recycler On Click","position: "+position);
+                Intent i = new Intent(context,RequestDetailActivity.class);
+                i.putExtra("request",singleRequest.getRequest());
+                context.startActivity(i);
             }
         });
     }
