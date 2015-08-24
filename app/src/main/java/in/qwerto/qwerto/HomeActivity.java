@@ -12,6 +12,10 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+import android.widget.Toast;
+
+import com.google.android.gms.location.places.Place;
+import com.google.android.gms.location.places.ui.PlacePicker;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -67,6 +71,7 @@ public class HomeActivity extends ActionBarActivity implements View.OnClickListe
 
 
     }
+
 
     private void setupViewPager(ViewPager viewPager){
         Adapter adapter = new Adapter(getSupportFragmentManager());
@@ -143,5 +148,15 @@ public class HomeActivity extends ActionBarActivity implements View.OnClickListe
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
+
+        int PLACE_PICKER_REQUEST = 1;
+        if (requestCode == PLACE_PICKER_REQUEST) {
+            if (resultCode == RESULT_OK) {
+                Place place = PlacePicker.getPlace(data, this);
+                String toastMsg = String.format("Place: %s", place.getName());
+                Toast.makeText(this, toastMsg, Toast.LENGTH_LONG).show();
+            }
+        }
+
     }
 }

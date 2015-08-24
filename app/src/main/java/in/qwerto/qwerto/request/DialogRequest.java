@@ -20,6 +20,10 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 
+import com.google.android.gms.common.GooglePlayServicesNotAvailableException;
+import com.google.android.gms.common.GooglePlayServicesRepairableException;
+import com.google.android.gms.location.places.ui.PlacePicker;
+
 import in.qwerto.qwerto.AppLocationService;
 import in.qwerto.qwerto.LocationAddress;
 import in.qwerto.qwerto.R;
@@ -108,19 +112,31 @@ public class DialogRequest extends Dialog implements View.OnClickListener {
                 break;
             case R.id.ivLocation:
                 //GetLocation
-                appLocationService = new AppLocationService(getOwnerActivity());
+//                appLocationService = new AppLocationService(getOwnerActivity());
+//
+//                gpsLocation = appLocationService
+//                        .getLocation(LocationManager.GPS_PROVIDER);
+//
+//                if (gpsLocation != null) {
+//                    latitude = gpsLocation.getLatitude();
+//                    longitude = gpsLocation.getLongitude();
+//                    LocationAddress locationAddress = new LocationAddress();
+//                    locationAddress.getAddressFromLocation(latitude, longitude,
+//                            getOwnerActivity().getApplicationContext(), new GeocoderHandler());
+//                } else {
+//                    showSettingsAlert();
+//                }
 
-                gpsLocation = appLocationService
-                        .getLocation(LocationManager.GPS_PROVIDER);
+                int PLACE_PICKER_REQUEST = 1;
+                PlacePicker.IntentBuilder builder = new PlacePicker.IntentBuilder();
 
-                if (gpsLocation != null) {
-                    latitude = gpsLocation.getLatitude();
-                    longitude = gpsLocation.getLongitude();
-                    LocationAddress locationAddress = new LocationAddress();
-                    locationAddress.getAddressFromLocation(latitude, longitude,
-                            getOwnerActivity().getApplicationContext(), new GeocoderHandler());
-                } else {
-                    showSettingsAlert();
+                Context context = getContext();
+                try {
+                    getOwnerActivity().startActivityForResult(builder.build(context), PLACE_PICKER_REQUEST);
+                } catch (GooglePlayServicesRepairableException e) {
+                    e.printStackTrace();
+                } catch (GooglePlayServicesNotAvailableException e) {
+                    e.printStackTrace();
                 }
                 break;
             case R.id.ivContact:
