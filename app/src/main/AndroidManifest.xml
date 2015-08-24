@@ -22,8 +22,10 @@
             android:name=".request.RequestDetailActivity"
             android:label="@string/title_activity_request_detail" >
         </activity>
-        <activity android:name=".common.ChatActivity">
-
+        <activity
+            android:name=".common.ChatActivity"
+            android:theme="@style/ChatTheme"
+            android:label="@string/title_chat_activity">
         </activity>
     </application>
 

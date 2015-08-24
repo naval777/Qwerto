@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="colorPrimary">#2196F3</color>
+    <color name="colorPrimaryDark">#1976D2</color>
+    <color name="colorAccent">#BBDEFB</color>
+    <color name="colorPrimaryGray">#CCCCCC</color>
+
+    <color name="colorSecondary">@color/material_deep_teal_200</color>
+    <color name="colorSecondaryDark">@color/material_deep_teal_500</color>
+
+    <color name="windowBackgroundColor">#333333</color>
+    <color name="black_translucent">#70000000</color>
+
+    <color name="dimmer">#EE000000</color>
+    <color name="white">#ffffff</color>
+    <color name="black_semi_transparent">#88000000</color>
+    <color name="white_pressed">#88FFFFFF</color>
+    <color name="half_black">#66000000</color>
+
+    <color name="bin_0">#fe0000</color>
+    <color name="bin_1">#ff7f00</color>
+    <color name="bin_2">#ffff00</color>
+    <color name="bin_3">#80ff00</color>
+    <color name="bin_4">#00ff01</color>
+    <color name="bin_5">#00fe81</color>
+    <color name="bin_6">#00ffff</color>
+    <color name="bin_7">#0080ff</color>
+    <color name="bin_8">#0000fe</color>
+    <color name="bin_9">#7f00ff</color>
+    <color name="bin_10">#ff00fe</color>
+    <color name="bin_11">#ff017e</color>
+    <color name="bin_12">#584a49</color>
+    <color name="bin_13">#5a514a</color>
+    <color name="bin_14">#585949</color>
+    <color name="bin_15">#51594a</color>
+    <color name="bin_16">#4b594a</color>
+    <color name="bin_17">#4a5952</color>
+    <color name="bin_18">#4a5a5a</color>
+    <color name="bin_19">#4a5159</color>
+    <color name="bin_20">#4b4a58</color>
+    <color name="bin_21">#514b59</color>
+    <color name="bin_22">#584a59</color>
+    <color name="bin_23">#594a51</color>
+    <color name="bin_24">#eac4c3</color>
+    <color name="bin_25">#ebd6c3</color>
+    <color name="bin_26">#eaebc3</color>
+    <color name="bin_27">#d6ebc4</color>
+    <color name="bin_28">#c4eac3</color>
+    <color name="bin_29">#c3ead7</color>
+    <color name="bin_30">#c2eaea</color>
+    <color name="bin_31">#c4d6ea</color>
+    <color name="bin_32">#c3c3e9</color>
+    <color name="bin_33">#d5c3e9</color>
+    <color name="bin_34">#e9c3ea</color>
+    <color name="bin_35">#eac3d6</color>
+    <color name="bin_36">#ffffff</color>
+    <color name="bin_37">#7b7b7b</color>
+    <color name="bin_38">#000000</color>
+</resources>
