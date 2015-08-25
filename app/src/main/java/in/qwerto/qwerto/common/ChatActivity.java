@@ -2,8 +2,10 @@ package in.qwerto.qwerto.common;
 
 import android.app.Activity;
 import android.os.Bundle;
+import android.support.v7.app.ActionBarActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.support.v7.widget.Toolbar;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.util.Log;
@@ -20,11 +22,12 @@ import in.qwerto.qwerto.R;
 /**
  * Created by sandeep on 21/8/15.
  */
-public class ChatActivity extends Activity {
+public class ChatActivity extends ActionBarActivity {
 
     RecyclerView chat;
     ArrayList<ChatClass> chatData;
     ChatAdapter adapter;
+    Toolbar toolbar;
 
     EditText chatBox;
     ImageView postAttach;
@@ -51,6 +54,15 @@ public class ChatActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.ac_chat);
+        toolbar = (Toolbar) findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        getSupportActionBar().setHomeButtonEnabled(true);
+        //getSupportActionBar().setIcon(R.drawable.propic);
+        //getSupportActionBar().setLogo(R.drawable.propic);
+        getSupportActionBar().setTitle("XYZ Agencies");
+        getSupportActionBar().setSubtitle("Specialist in Mobile Repairs");
+
         chat = (RecyclerView) findViewById(R.id.rvChat);
         chatBox = (EditText) findViewById(R.id.etMessage);
         postAttach = (ImageView) findViewById(R.id.ivPostAttach);

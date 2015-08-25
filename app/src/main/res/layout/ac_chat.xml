@@ -1,8 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:gravity="center">
+    android:background="#DDDDDD"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="?attr/colorPrimary"
+        android:elevation="5dp"
+        android:theme="@style/LightToolbar">
+    </android.support.v7.widget.Toolbar>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
 
     <android.support.v7.widget.RecyclerView
         android:layout_above="@+id/chatFooter"
@@ -16,7 +31,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:paddingLeft="10dp">
+        android:padding="5dp">
 
         <ImageView
             android:id="@+id/ivPostAttach"
@@ -33,9 +48,10 @@
             android:layout_centerVertical="true"
             android:layout_toLeftOf="@+id/ivPostAttach"
             android:background="@android:drawable/editbox_background"
-            android:hint="add your text"/>
+            android:hint="Send Message"/>
 
+    </RelativeLayout>
     </RelativeLayout>
 
 
-</RelativeLayout>
+</LinearLayout>
