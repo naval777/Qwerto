@@ -5,19 +5,27 @@ package in.qwerto.qwerto.common;
  */
 public class ChatClass {
 
-    private int side;
-    private String msg;
+    int side;
+    int type;
+    //type =1 for text
+    //type =2 for image
+    //type =3 for contact
 
-    public ChatClass(int side, String msg){
+    public ChatClass(){
+
+    }
+
+    public ChatClass(int side,int type)
+    {
         this.side=side;
-        this.msg=msg;
+        this.type=type;
     }
 
     public int getSide() {
         return side;
     }
 
-    public String getMsg() {
-        return msg;
+    public int getType(){
+        return type;
     }
 }

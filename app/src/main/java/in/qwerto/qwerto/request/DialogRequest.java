@@ -127,12 +127,11 @@ public class DialogRequest extends Dialog implements View.OnClickListener {
 //                    showSettingsAlert();
 //                }
 
-                int PLACE_PICKER_REQUEST = 1;
                 PlacePicker.IntentBuilder builder = new PlacePicker.IntentBuilder();
 
                 Context context = getContext();
                 try {
-                    getOwnerActivity().startActivityForResult(builder.build(context), PLACE_PICKER_REQUEST);
+                    getOwnerActivity().startActivityForResult(builder.build(context), LOCATION);
                 } catch (GooglePlayServicesRepairableException e) {
                     e.printStackTrace();
                 } catch (GooglePlayServicesNotAvailableException e) {
