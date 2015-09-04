@@ -1,6 +1,5 @@
 package in.qwerto.qwerto.common;
 
-import android.app.Activity;
 import android.content.ActivityNotFoundException;
 import android.content.Intent;
 import android.database.Cursor;
@@ -17,15 +16,14 @@ import android.support.v7.widget.Toolbar;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.util.Log;
-import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.ImageView;
-import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.android.gms.location.places.Place;
 import com.google.android.gms.location.places.ui.PlacePicker;
+import com.google.android.gms.maps.model.LatLng;
 
 import java.util.ArrayList;
 
@@ -42,6 +40,8 @@ public class ChatActivity extends ActionBarActivity {
     private final int TAKE_PIC = 1, OPEN_GALLERY = 2, LOCATION = 3, CONTACT = 4, AUDIO = 5, WISHLIST = 6, CROP_PIC = 7;
     Uri uri;
     Toolbar toolbar;
+
+    DownloadImageTask downloadImageTask;
 
     EditText chatBox;
     ImageView postAttach;
@@ -171,9 +171,17 @@ public class ChatActivity extends ActionBarActivity {
             case LOCATION:
                 if (resultCode == RESULT_OK) {
                     Place place = PlacePicker.getPlace(data, this);
-                    String toastMsg = String.format("Place: %s", place.getName());
-                    Toast.makeText(this, toastMsg, Toast.LENGTH_LONG).show();
+                    LatLng ll=place.getLatLng();
+                    double lon=ll.longitude;
+                    double lat = ll.latitude;
+                    Log.d("location","lat:"+lat+" lon:"+lon);
+                    ChatLocation chatLocation = new ChatLocation(1,4,(String)place.getName(),lat,lon);
+                    chatData.add(chatLocation);
+                    adapter.notifyDataSetChanged();
+                    chat.scrollToPosition(chatData.size()-1);
                 }
+
+
                 break;
             case TAKE_PIC:
                 uri = data.getData();

@@ -14,7 +14,6 @@ public class ChatText extends ChatClass {
     public ChatText(int side, int type, String msg){
         super(side,type);
         this.msg=msg;
-
     }
 
     public int getSide() {

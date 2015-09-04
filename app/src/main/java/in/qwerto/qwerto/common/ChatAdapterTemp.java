@@ -35,6 +35,9 @@ public class ChatAdapterTemp extends RecyclerView.Adapter<ChatAdapterTemp.ChatVi
             case 3:
                 view= inflater.inflate(R.layout.view_chat_contact,parent,false);
                 return new ChatViewHolder(view,3);
+            case 4:
+                view = inflater.inflate(R.layout.view_chat_location,parent,false);
+                return new ChatViewHolder(view,4);
         }
         return null;
     }
@@ -52,6 +55,13 @@ public class ChatAdapterTemp extends RecyclerView.Adapter<ChatAdapterTemp.ChatVi
             ChatContact cc = (ChatContact) chatData.get(position);
             holder.contactName.setText(cc.getName());
             holder.contactNumber.setText(cc.getNumber());
+        }else if (single.getType()==4){
+            ChatLocation cl = (ChatLocation) chatData.get(position);
+            holder.locationName.setText(cl.getName());
+            double lat = cl.getLatitude();
+            double lon = cl.getLongitude();
+            String url = "https://maps.googleapis.com/maps/api/staticmap?center="+lat+","+lon+"&zoom=17&size=600x300&maptype=normal";
+            new DownloadImageTask(holder.locationImage).execute(url);
         }
         if(single.getSide()==1){
             holder.chat.setGravity(Gravity.RIGHT);
@@ -74,8 +84,9 @@ public class ChatAdapterTemp extends RecyclerView.Adapter<ChatAdapterTemp.ChatVi
     class ChatViewHolder extends RecyclerView.ViewHolder {
 
         TextView msg;
-        ImageView image;
+        ImageView image, locationImage;
         TextView contactName,contactNumber;
+        TextView locationName;
         LinearLayout chat;
 
         public ChatViewHolder(View itemView,int type) {
@@ -91,6 +102,10 @@ public class ChatAdapterTemp extends RecyclerView.Adapter<ChatAdapterTemp.ChatVi
                 case 3:
                     contactName= (TextView) itemView.findViewById(R.id.tvChatContactName);
                     contactNumber= (TextView) itemView.findViewById(R.id.tvChatContactNumber);
+                    break;
+                case 4:
+                    locationImage = (ImageView) itemView.findViewById(R.id.ivStaticMap);
+                    locationName = (TextView) itemView.findViewById(R.id.tvStaticMapLocation);
                     break;
             }
 

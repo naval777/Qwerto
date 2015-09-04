@@ -49,7 +49,7 @@ public class RequestDetailActivity extends ActionBarActivity {
             public void onSwiped(RecyclerView.ViewHolder viewHolder, int direction) {
                 if(viewHolder.getAdapterPosition()!=0) {
                     //Error here. Check
-//                    vendorsData.remove(viewHolder.getAdapterPosition());
+                    vendorsData.remove(viewHolder.getAdapterPosition());
                     adapter.notifyItemRemoved(viewHolder.getAdapterPosition());
                 }
             }

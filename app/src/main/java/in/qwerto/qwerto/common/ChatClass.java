@@ -10,6 +10,7 @@ public class ChatClass {
     //type =1 for text
     //type =2 for image
     //type =3 for contact
+    //type =4 for Location
 
     public ChatClass(){
 
