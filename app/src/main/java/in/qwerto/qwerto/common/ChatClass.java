@@ -11,6 +11,7 @@ public class ChatClass {
     //type =2 for image
     //type =3 for contact
     //type =4 for Location
+    //type =5 for suggestions
 
     public ChatClass(){
 

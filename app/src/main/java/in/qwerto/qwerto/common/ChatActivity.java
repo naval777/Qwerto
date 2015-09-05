@@ -7,7 +7,6 @@ import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.net.Uri;
 import android.os.Bundle;
-import android.provider.Contacts;
 import android.provider.ContactsContract;
 import android.support.v7.app.ActionBarActivity;
 import android.support.v7.widget.LinearLayoutManager;
@@ -25,18 +24,22 @@ import com.google.android.gms.location.places.Place;
 import com.google.android.gms.location.places.ui.PlacePicker;
 import com.google.android.gms.maps.model.LatLng;
 
+import java.lang.reflect.Array;
 import java.util.ArrayList;
 
 import in.qwerto.qwerto.R;
+import in.qwerto.qwerto.SingleSuggestion;
 
 /**
  * Created by sandeep on 21/8/15.
  */
 public class ChatActivity extends ActionBarActivity {
 
+
+
     RecyclerView chat;
     ArrayList<ChatClass> chatData;
-    ChatAdapterTemp adapter;
+    ChatAdapter adapter;
     private final int TAKE_PIC = 1, OPEN_GALLERY = 2, LOCATION = 3, CONTACT = 4, AUDIO = 5, WISHLIST = 6, CROP_PIC = 7;
     Uri uri;
     Toolbar toolbar;
@@ -50,20 +53,13 @@ public class ChatActivity extends ActionBarActivity {
     DialogChat dialogChat;
 
     //Hard-coded data
-    String [] msgs = {"Hi",
-            "Hi. How can I help you?",
-            "What's up girl",
-            "I am pregnant",
-            "No Joke",
-            "Is Danny the dad",
-            "Yeah that night",
-            "We were very drunk",
-            "Okay. What are you gonna do?",
-            "Well I didn't want to tell Danny this",
-            "You have to tell him","No way",
-            "I know. It could be 10",
-            "Looks like their backs has been broken"};
-    int [] sides={1,2,2,1,1,2,1,1,2,1,2,1,2};
+    String [] msgs = {"Hi, I would like to find a 2BHK near Ascendas. My budget is 12K",
+            "Hello. We will process your request",
+            "Hey we have found 4 suggestions for you",
+            "Thanks for the response. I would like to take the second option. Can I know more details about the place.",
+            "Sure, I am sending the owner's contact details. Please contact him. For any further queries contact me! :)","Thank you"};
+    int [] sides={1,2,2,1,2,1};
+    int [] types = {1,4,1,1,5,1,1,3,1};
 
     int j=0;
 
@@ -93,29 +89,59 @@ public class ChatActivity extends ActionBarActivity {
         postAttach = (ImageView) findViewById(R.id.ivPostAttach);
         chatData = new ArrayList<ChatClass>();
 
-        for(int i=0;i<sides.length;i++){
-            ChatClass cclass = new ChatClass();
-            switch (i%3){
-                case 0:
-                    ChatText ct = new ChatText(sides[i],1,msgs[i]);
-                    cclass=ct;
+        int k=0;
+        for (int i=0;i<types.length;i++){
+            switch (types[i]){
+                case 1:
+                    ChatText ct = new ChatText(sides[k],1,msgs[k]);
+                    k++;
                     chatData.add(ct);
                     break;
-                case 1:
-                    ChatImage ci = new ChatImage(sides[i],2,bitmap[j]);
-                    cclass=ci;
-                    j++;
+                case 3:
+                    ChatContact cc = new ChatContact(2,3,"Apartment owner","9876543210");
+                    chatData.add(cc);
                     break;
-                case 2:
-                    ChatContact cc = new ChatContact(sides[i],3,"Sandeep","7418191883");
-                    cclass=cc;
+                case 4:
+                    ChatLocation cl = new ChatLocation(1,4,"Ascendas",12.985806, 80.249666);
+                    chatData.add(cl);
+                    break;
+                case 5:
+                    ArrayList<SingleSuggestion> ss = new ArrayList<SingleSuggestion>();
+                    Log.d("ChatActivity","working");
+                        ss.add(new SingleSuggestion("Mandakini Hostel", new ChatLocation(1,4, "Mandakini hostel",13.082680,80.270718)));
+                        ss.add(new SingleSuggestion("Research Park",new ChatLocation(1,4,"Research Park",12.985854,80.249685)));
+                        ss.add(new SingleSuggestion("Tiruvanmayur", new ChatLocation(1,4,"Tirubanmayur",13.009361,80.213231)));
+                        ss.add(new SingleSuggestion("NIFT", new ChatLocation(1,4,"NIFT",12.984193,80.251769)));
+                    ChatSuggestions cs = new ChatSuggestions(2,5,ss);
+                    chatData.add(cs);
                     break;
             }
-            chatData.add(cclass);
-
         }
 
-        adapter = new ChatAdapterTemp(this,chatData);
+
+//        for(int i=0;i<sides.length;i++){
+//            ChatClass cclass = new ChatClass();
+//            switch (i%3){
+//                case 0:
+//                    ChatText ct = new ChatText(sides[i],1,msgs[i]);
+//                    cclass=ct;
+//                    chatData.add(ct);
+//                    break;
+//                case 1:
+//                    ChatImage ci = new ChatImage(sides[i],2,bitmap[j]);
+//                    cclass=ci;
+//                    j++;
+//                    break;
+//                case 2:
+//                    ChatContact cc = new ChatContact(sides[i],3,"Sandeep","7418191883");
+//                    cclass=cc;
+//                    break;
+//            }
+//            chatData.add(cclass);
+//
+//        }
+
+        adapter = new ChatAdapter(this,chatData);
 
         chat.setAdapter(adapter);
         chat.setLayoutManager(new LinearLayoutManager(this));

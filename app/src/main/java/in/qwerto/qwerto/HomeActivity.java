@@ -41,7 +41,7 @@ public class HomeActivity extends ActionBarActivity implements View.OnClickListe
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_home);
+        setContentView(R.layout.ac_home);
 
         findViewById(R.id.tRequest).setOnClickListener(this);
         findViewById(R.id.tStores).setOnClickListener(this);

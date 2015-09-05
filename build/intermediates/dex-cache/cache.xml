@@ -23,13 +23,6 @@
         <dex dex="/home/sandeep/Desktop/Qwerto/app/build/intermediates/pre-dexed/debug/classes-0942e4e3614aae39a2534cb2bc5de0e122717d11.jar" />
     </item>
     <item
-        jar="/home/sandeep/Desktop/Qwerto/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-wearable/7.8.0/classes.jar"
-        jumboMode="false"
-        revision="22.0.1"
-        sha1="c5cafb324568d954780abb858c25db7ce675ab3c">
-        <dex dex="/home/sandeep/Desktop/Qwerto/app/build/intermediates/pre-dexed/debug/classes-696191b05d4e40a21332a60a1a5a9a3b41fbe4fb.jar" />
-    </item>
-    <item
         jar="/home/sandeep/Desktop/Qwerto/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-nearby/7.8.0/classes.jar"
         jumboMode="false"
         revision="22.0.1"
@@ -44,20 +37,6 @@
         <dex dex="/home/sandeep/Desktop/Qwerto/app/build/intermediates/pre-dexed/debug/classes-f9652caceec191474458a5e18a9921a9c07b3a9c.jar" />
     </item>
     <item
-        jar="/home/sandeep/Desktop/Qwerto/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-identity/7.8.0/classes.jar"
-        jumboMode="false"
-        revision="22.0.1"
-        sha1="d11330ea68c0d964d30d5caed1f27e6b1488b189">
-        <dex dex="/home/sandeep/Desktop/Qwerto/app/build/intermediates/pre-dexed/debug/classes-478e75a14147a5855707f4a120f234c6a8efc884.jar" />
-    </item>
-    <item
-        jar="/home/sandeep/Desktop/Qwerto/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-fitness/7.8.0/classes.jar"
-        jumboMode="false"
-        revision="22.0.1"
-        sha1="77a9dcb5f8b1dba36aacaa9c150eb0942dbea158">
-        <dex dex="/home/sandeep/Desktop/Qwerto/app/build/intermediates/pre-dexed/debug/classes-605ad24ce64a7857fce41df984156d3eb0d5b82e.jar" />
-    </item>
-    <item
         jar="/home/sandeep/Desktop/Qwerto/app/build/intermediates/exploded-aar/com.android.support/support-v4/22.2.0/libs/internal_impl-22.2.0.jar"
         jumboMode="false"
         revision="22.0.1"
@@ -70,13 +49,6 @@
         revision="22.0.1"
         sha1="cb6fab7a71fa9ec1f483d44c5fca65ab469d8aca">
         <dex dex="/home/sandeep/Desktop/Qwerto/app/build/intermediates/pre-dexed/debug/classes-7b17700ac2056ba3cfd9d067d1c092e11d88f849.jar" />
-    </item>
-    <item
-        jar="/home/sandeep/Desktop/Qwerto/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-safetynet/7.8.0/classes.jar"
-        jumboMode="false"
-        revision="22.0.1"
-        sha1="166e458ee3b5fb5fcff0f936df3f3a788e6c54f3">
-        <dex dex="/home/sandeep/Desktop/Qwerto/app/build/intermediates/pre-dexed/debug/classes-38b3cd1303800c91d8c2dfd6af250aaef9e280a1.jar" />
     </item>
     <item
         jar="/home/sandeep/Desktop/Qwerto/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-cast/7.8.0/classes.jar"
@@ -121,13 +93,6 @@
         <dex dex="/home/sandeep/Desktop/Qwerto/app/build/intermediates/pre-dexed/debug/classes-784bc23e15a9f5411bac91d0d5f698fd8186379b.jar" />
     </item>
     <item
-        jar="/home/sandeep/Desktop/Qwerto/app/build/intermediates/exploded-aar/com.android.support/mediarouter-v7/22.2.0/classes.jar"
-        jumboMode="false"
-        revision="22.0.1"
-        sha1="dcf8c83c3dead00a6c4fe313e95f7aaca20dc641">
-        <dex dex="/home/sandeep/Desktop/Qwerto/app/build/intermediates/pre-dexed/debug/classes-685f0124389e82f8ce2eaafa2040b5f13dff5fa1.jar" />
-    </item>
-    <item
         jar="/home/sandeep/.gradle/caches/modules-2/files-2.1/com.parse.bolts/bolts-android/1.2.0/6ee2953ccf51ce72b6d548c30c4633b99eb4f9dd/bolts-android-1.2.0.jar"
         jumboMode="false"
         revision="22.0.1"
@@ -170,25 +135,11 @@
         <dex dex="/home/sandeep/Desktop/Qwerto/app/build/intermediates/pre-dexed/debug/classes-4abbc1d0df4ff71c82fab633b2e0b0a74ecf9b21.jar" />
     </item>
     <item
-        jar="/home/sandeep/Desktop/Qwerto/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-panorama/7.8.0/classes.jar"
-        jumboMode="false"
-        revision="22.0.1"
-        sha1="6e85edfc9b5346d216e50ccef1f8e825504144a3">
-        <dex dex="/home/sandeep/Desktop/Qwerto/app/build/intermediates/pre-dexed/debug/classes-ca9329329ef55d5ea97d47aedda8d7130ef70322.jar" />
-    </item>
-    <item
         jar="/home/sandeep/Desktop/Qwerto/app/build/intermediates/exploded-aar/com.android.support/recyclerview-v7/22.2.0/classes.jar"
         jumboMode="false"
         revision="22.0.1"
         sha1="5b37cf49773f7f17aca9830efd3053b0cac56728">
         <dex dex="/home/sandeep/Desktop/Qwerto/app/build/intermediates/pre-dexed/debug/classes-3509340c2eb21ab4df264f76a01c9827e3e183c4.jar" />
-    </item>
-    <item
-        jar="/home/sandeep/Desktop/Qwerto/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/7.8.0/classes.jar"
-        jumboMode="false"
-        revision="22.0.1"
-        sha1="c0c912d58c9468b1f9d9769c8975afdf2c85d681">
-        <dex dex="/home/sandeep/Desktop/Qwerto/app/build/intermediates/pre-dexed/debug/classes-39d8ec9c901cb989fb2295d0af73e935946c879e.jar" />
     </item>
     <item
         jar="/home/sandeep/Desktop/Qwerto/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-vision/7.8.0/classes.jar"
@@ -198,18 +149,67 @@
         <dex dex="/home/sandeep/Desktop/Qwerto/app/build/intermediates/pre-dexed/debug/classes-957bb119eec982d6f21b45ef7ffd4108d1be847e.jar" />
     </item>
     <item
-        jar="/home/sandeep/Desktop/Qwerto/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-location/7.8.0/classes.jar"
-        jumboMode="false"
-        revision="22.0.1"
-        sha1="4a135d56554069e5d0ff80e3220e887e57146ee5">
-        <dex dex="/home/sandeep/Desktop/Qwerto/app/build/intermediates/pre-dexed/debug/classes-91efd8119704ff6159e6dcef9ded08f220c8fe3d.jar" />
-    </item>
-    <item
         jar="/home/sandeep/Desktop/Qwerto/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-plus/7.8.0/classes.jar"
         jumboMode="false"
         revision="22.0.1"
         sha1="2491ae1b2a848af1f4f0c795f3117c1bd6a1989f">
         <dex dex="/home/sandeep/Desktop/Qwerto/app/build/intermediates/pre-dexed/debug/classes-c0ce13105fffd4b7705faf3333a593744db31466.jar" />
+    </item>
+    <item
+        jar="/home/sandeep/Desktop/Qwerto/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-wearable/7.8.0/classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="c5cafb324568d954780abb858c25db7ce675ab3c">
+        <dex dex="/home/sandeep/Desktop/Qwerto/app/build/intermediates/pre-dexed/debug/classes-696191b05d4e40a21332a60a1a5a9a3b41fbe4fb.jar" />
+    </item>
+    <item
+        jar="/home/sandeep/Desktop/Qwerto/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-identity/7.8.0/classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="d11330ea68c0d964d30d5caed1f27e6b1488b189">
+        <dex dex="/home/sandeep/Desktop/Qwerto/app/build/intermediates/pre-dexed/debug/classes-478e75a14147a5855707f4a120f234c6a8efc884.jar" />
+    </item>
+    <item
+        jar="/home/sandeep/Desktop/Qwerto/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-fitness/7.8.0/classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="77a9dcb5f8b1dba36aacaa9c150eb0942dbea158">
+        <dex dex="/home/sandeep/Desktop/Qwerto/app/build/intermediates/pre-dexed/debug/classes-605ad24ce64a7857fce41df984156d3eb0d5b82e.jar" />
+    </item>
+    <item
+        jar="/home/sandeep/Desktop/Qwerto/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-safetynet/7.8.0/classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="166e458ee3b5fb5fcff0f936df3f3a788e6c54f3">
+        <dex dex="/home/sandeep/Desktop/Qwerto/app/build/intermediates/pre-dexed/debug/classes-38b3cd1303800c91d8c2dfd6af250aaef9e280a1.jar" />
+    </item>
+    <item
+        jar="/home/sandeep/Desktop/Qwerto/app/build/intermediates/exploded-aar/com.android.support/mediarouter-v7/22.2.0/classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="dcf8c83c3dead00a6c4fe313e95f7aaca20dc641">
+        <dex dex="/home/sandeep/Desktop/Qwerto/app/build/intermediates/pre-dexed/debug/classes-685f0124389e82f8ce2eaafa2040b5f13dff5fa1.jar" />
+    </item>
+    <item
+        jar="/home/sandeep/Desktop/Qwerto/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-panorama/7.8.0/classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="6e85edfc9b5346d216e50ccef1f8e825504144a3">
+        <dex dex="/home/sandeep/Desktop/Qwerto/app/build/intermediates/pre-dexed/debug/classes-ca9329329ef55d5ea97d47aedda8d7130ef70322.jar" />
+    </item>
+    <item
+        jar="/home/sandeep/Desktop/Qwerto/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/7.8.0/classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="c0c912d58c9468b1f9d9769c8975afdf2c85d681">
+        <dex dex="/home/sandeep/Desktop/Qwerto/app/build/intermediates/pre-dexed/debug/classes-39d8ec9c901cb989fb2295d0af73e935946c879e.jar" />
+    </item>
+    <item
+        jar="/home/sandeep/Desktop/Qwerto/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-location/7.8.0/classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="4a135d56554069e5d0ff80e3220e887e57146ee5">
+        <dex dex="/home/sandeep/Desktop/Qwerto/app/build/intermediates/pre-dexed/debug/classes-91efd8119704ff6159e6dcef9ded08f220c8fe3d.jar" />
     </item>
 
 </items>

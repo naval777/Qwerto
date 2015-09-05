@@ -38,8 +38,9 @@
             android:theme="@android:style/Theme.Translucent.NoTitleBar" >
         </activity>
         <activity
-            android:name=".FBLogin"
+            android:name=".Login.FBLogin"
             android:label="@string/title_activity_fblogin" >
+
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -47,8 +48,12 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".UserDetails"
+            android:name=".Login.UserDetails"
             android:label="@string/title_activity_user_details" >
+        </activity>
+        <activity
+            android:name=".Maps.MapsActivity"
+            android:label="@string/title_activity_maps" >
         </activity>
     </application>
 
